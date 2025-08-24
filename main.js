@@ -20,10 +20,8 @@ const knightMoves = (start, end) => {
   visited.add(start.toString());
 
   while (queue.length > 0) {
-    const currentPath = queue.shift(); //
+    const currentPath = queue.shift();
 
-    // currentPath ex.: [[0, 0], [1, 2], [3, 3]]
-    //                     0       1        2
     const currentPosition = currentPath[currentPath.length - 1];
     const [x, y] = currentPosition;
 
@@ -53,20 +51,5 @@ const knightMoves = (start, end) => {
   return null;
 };
 
-// knightMoves([0, 0], [0, 1]);
-
-// TESTS:
-let start2 = [0, 0];
-
-const queue2 = [[start2]];
-
-console.log(queue2);
-
-const currentPath2 = queue2.shift();
-console.log(currentPath2);
-
-const currentPosition2 = currentPath2[currentPath2.length - 1];
-console.log(currentPosition2);
-
-// currentPath ex.: [[0, 0], [1, 2], [3, 3]]
-//                     0       1        2
+// Test run:
+knightMoves([3, 3], [2, 5]);
